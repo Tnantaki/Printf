@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag.c                                          :+:      :+:    :+:   */
+/*   ft_flag_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tnantaki <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tnantaki <tnantaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 10:15:08 by tnantaki          #+#    #+#             */
-/*   Updated: 2022/10/16 10:16:33 by tnantaki         ###   ########.fr       */
+/*   Created: 2023/02/09 10:49:42 by tnantaki          #+#    #+#             */
+/*   Updated: 2023/02/09 10:49:44 by tnantaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf_bonus.h"
 
-t_flag	ft_checkflag1(char *fmt, t_flag pts)
+static t_flag	ft_checkflag1(char *fmt, t_flag pts)
 {
 	size_t	i;
 
@@ -30,7 +30,7 @@ t_flag	ft_checkflag1(char *fmt, t_flag pts)
 	return (pts);
 }
 
-t_flag	ft_checkflag2(char *fmt, t_flag pts)
+static t_flag	ft_checkflag2(char *fmt, t_flag pts)
 {
 	int	i;
 

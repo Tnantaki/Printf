@@ -10,9 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <unistd.h>
+#include <stdarg.h>
+#include <stdio.h>// For Checking, Don't forget to delete.
 
-int	ft_putstr(char *s)
+static int	ft_putstr(char *s)
 {
 	int	len;
 
@@ -25,10 +27,10 @@ int	ft_putstr(char *s)
 	return (len);
 }
 
-int	ft_putnbr(long long n)
+static int	ft_putnbr(long long n)
 {
-	int		len;
 	int		i;
+	int		len;
 	char	nbr[12];
 
 	i = 0;
@@ -52,14 +54,14 @@ int	ft_putnbr(long long n)
 	return (len);
 }
 
-int	ft_put16(unsigned long long n, char k)
+static int	ft_put16(unsigned long long n, char k)
 {
-	int		len;
 	int		i;
+	int		len;
 	char	nbr[20];
 
-	len = 0;
 	i = 0;
+	len = 0;
 	if (k == 'x' || k == 'X')
 		n = (unsigned int)n;
 	if (n == 0)
@@ -79,7 +81,7 @@ int	ft_put16(unsigned long long n, char k)
 	return (len);
 }
 
-int	ft_checktype(char c, va_list pra)
+static int	ft_checktype(char c, va_list pra)
 {
 	int	len;
 
@@ -104,8 +106,8 @@ int	ft_checktype(char c, va_list pra)
 
 int	ft_printf(const char *str, ...)
 {
-	int		len;
 	int		i;
+	int		len;
 	va_list	pra;
 
 	i = 0;
@@ -122,29 +124,26 @@ int	ft_printf(const char *str, ...)
 	va_end(pra);
 	return (len);
 }
-/*
-int	main(void)
-{
-	// char c  = 'A';
-	int lenprintf;
-	int ft_lenprintf;
-	char *str = "Hello";
-	// long nb = INT_MIN + (-1000000000000);
-	// int		n = nb;
-	// int b = INT_MIN + (-1000000000000);
 
-
-	// ft_lenprintf intintf("%x\n", LONG_MAX);
-	// lenprintf = printf("%X\n", LONG_MAX);
-	// ft_lenprintf = ft_printf("%X\n", LONG_MAX);
-	lenprintf = printf("%s\n", str);
-	ft_lenprintf = ft_printf("%s\n", str);
-	printf("lenprint   :%d\n", lenprintf);
-	printf("ft_lenprint:%d\n", ft_lenprintf);
-	// printf("%d\n", nb);
-	// printf("%u\n", nb + 1000000000);
-	// printf("%d\n", INT_MIN - 20);
-	// ft_printf("%d\n", INT_MIN - 20);
-	// printf("%p\n", str);
-}
-*/
+// int	main(void)
+// {
+// 	// char c  = 'A';
+// 	int lenprintf;
+// 	int ft_lenprintf;
+// 	char *str = "Hello";
+// 	// long nb = INT_MIN + (-1000000000000);
+// 	// int		n = nb;
+// 	// int b = INT_MIN + (-1000000000000);
+// 	// ft_lenprintf intintf("%x\n", LONG_MAX);
+// 	// lenprintf = printf("%X\n", LONG_MAX);
+// 	// ft_lenprintf = ft_printf("%X\n", LONG_MAX);
+// 	lenprintf = printf("%s\n", str);
+// 	ft_lenprintf = ft_printf("%s\n", str);
+// 	printf("lenprint   :%d\n", lenprintf);
+// 	printf("ft_lenprint:%d\n", ft_lenprintf);
+// 	// printf("%d\n", nb);
+// 	// printf("%u\n", nb + 1000000000);
+// 	// printf("%d\n", INT_MIN - 20);
+// 	// ft_printf("%d\n", INT_MIN - 20);
+// 	// printf("%p\n", str);
+// }

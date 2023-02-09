@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_writef.c                                        :+:      :+:    :+:   */
+/*   ft_writef_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnantaki <tnantaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 23:02:01 by tnantaki          #+#    #+#             */
-/*   Updated: 2022/10/16 10:31:57 by tnantaki         ###   ########.fr       */
+/*   Created: 2023/02/09 10:51:04 by tnantaki          #+#    #+#             */
+/*   Updated: 2023/02/09 10:51:06 by tnantaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf_bonus.h"
 
 t_flag	ft_count_len_fmt(char *nb, t_flag pts)
 {
@@ -117,14 +117,3 @@ t_flag	ft_write_nb16(char *nb, t_flag pts, char k)
 		pts.len_ptf += ft_putchar_n(' ', pts.wid);
 	return (pts);
 }
-/*
-int main(void)
-{
-	t_flag pts;
-
-	pts.plus = '+';
-	int l = ft_write_nb("3483", pts);
-	printf("\n%d\n", l);
-
-}
-*/

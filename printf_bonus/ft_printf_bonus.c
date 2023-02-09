@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnantaki <tnantaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 10:17:21 by tnantaki          #+#    #+#             */
-/*   Updated: 2022/10/17 15:32:55 by tnantaki         ###   ########.fr       */
+/*   Created: 2023/02/09 10:49:58 by tnantaki          #+#    #+#             */
+/*   Updated: 2023/02/09 10:50:01 by tnantaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf_bonus.h"
 
-t_flag	ft_checktype(va_list pra, t_flag pts, char c)
+static t_flag	ft_checktype(va_list pra, t_flag pts, char c)
 {
 	if (c == 'c')
 		pts = ft_write_char(va_arg(pra, int), pts);
@@ -27,7 +27,7 @@ t_flag	ft_checktype(va_list pra, t_flag pts, char c)
 	return (pts);
 }
 
-int	ft_len_fmt(const char *str)
+static int	ft_len_fmt(const char *str)
 {
 	int		i;
 	int		j;
@@ -49,7 +49,7 @@ int	ft_len_fmt(const char *str)
 	return (0);
 }
 
-t_flag	ft_format(va_list pra, const char *str, t_flag pts)
+static t_flag	ft_format(va_list pra, const char *str, t_flag pts)
 {
 	int		len_fmt;
 	char	*fmt;
@@ -90,7 +90,7 @@ int	ft_printf(const char *str, ...)
 	va_end(pra);
 	return (pts.len_ptf);
 }
-
+/*
 int	main(void)
 {
 	int lenprintf;
@@ -103,4 +103,4 @@ int	main(void)
 	// printf("lenprint   :%d\n", lenprintf);
 	// printf("ft_lenprint:%d\n", ft_lenprintf);
 }
-
+*/

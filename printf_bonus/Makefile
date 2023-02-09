@@ -12,8 +12,8 @@
 
 FLAGS = -Wall -Werror -Wextra
 NAME = libftprintf.a
-SRCS =	ft_printf.c ft_flag.c ft_putall.c\
-		ft_utils.c ft_atoi.c ft_writef.c
+SRCS =	ft_printf_bonus.c ft_flag_bonus.c ft_putall_bonus.c\
+		ft_utils_bonus.c ft_atoi_bonus.c ft_writef_bonus.c
 
 OBJS = $(SRCS:.c=.o)
 

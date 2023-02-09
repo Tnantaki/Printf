@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnantaki <tnantaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 10:40:51 by tnantaki          #+#    #+#             */
-/*   Updated: 2022/10/17 09:45:55 by tnantaki         ###   ########.fr       */
+/*   Created: 2023/02/09 10:50:18 by tnantaki          #+#    #+#             */
+/*   Updated: 2023/02/09 10:50:21 by tnantaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef FT_PRINTF_BONUS_H
+# define FT_PRINTF_BONUS_H
 
 # include <unistd.h>
 # include <stdarg.h>
@@ -47,7 +47,7 @@ size_t	ft_strlen(const char *str);
 int		ft_putchar(char c);
 int		ft_putstr(char *s);
 char	*ft_substr(char const *s, size_t start, size_t len);
-void	ft_swap(char *src);
+void	ft_reverse(char *src);
 //atoi
 int		ft_isdigit(int c);
 int		ft_atoi(const char *str);

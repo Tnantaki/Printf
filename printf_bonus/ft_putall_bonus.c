@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putall.c                                        :+:      :+:    :+:   */
+/*   ft_putall_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnantaki <tnantaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 19:30:10 by tnantaki          #+#    #+#             */
-/*   Updated: 2022/10/17 09:45:44 by tnantaki         ###   ########.fr       */
+/*   Created: 2023/02/09 10:50:31 by tnantaki          #+#    #+#             */
+/*   Updated: 2023/02/09 10:50:34 by tnantaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf_bonus.h"
 
 int	ft_putchar_n(char c, int n)
 {
@@ -57,7 +57,7 @@ t_flag	ft_putnbr(long long n, t_flag pts)
 		n /= 10;
 	}
 	nbr[i] = '\0';
-	ft_swap(nbr);
+	ft_reverse(nbr);
 	pts = ft_write_nb(nbr, pts);
 	return (pts);
 }
@@ -81,7 +81,7 @@ t_flag	ft_put16(unsigned long long n, char k, t_flag pts)
 		n /= 16;
 	}
 	nbr[i] = '\0';
-	ft_swap(nbr);
+	ft_reverse(nbr);
 	pts = ft_write_nb16(nbr, pts, k);
 	return (pts);
 }

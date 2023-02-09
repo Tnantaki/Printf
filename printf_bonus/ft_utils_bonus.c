@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils.c                                         :+:      :+:    :+:   */
+/*   ft_utils_bonus.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnantaki <tnantaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 23:02:01 by tnantaki          #+#    #+#             */
-/*   Updated: 2022/10/16 12:39:23 by tnantaki         ###   ########.fr       */
+/*   Created: 2023/02/09 10:50:44 by tnantaki          #+#    #+#             */
+/*   Updated: 2023/02/09 10:50:46 by tnantaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf_bonus.h"
 
 size_t	ft_strlen(const char *str)
 {
@@ -69,7 +69,7 @@ char	*ft_substr(const char *s, size_t start, size_t len)
 	return (dst);
 }
 
-void	ft_swap(char *src)
+void	ft_reverse(char *src)
 {
 	char	tmp[20];
 	int		len;
